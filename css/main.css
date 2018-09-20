@@ -15,13 +15,15 @@ body {
 h1 {
   text-align: center;
   text-transform: uppercase;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 2em;
 }
 
 p {
 	font-size: .95em;
 	margin-bottom: 1.8em;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 h2,
@@ -33,7 +35,9 @@ a {
 h2,
 h3,
 h4 {
-	margin-top: 0;
+	margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 0;
 }
 
 h4 {
@@ -80,6 +84,10 @@ img {
 		color: #093a58;
 	}
 
+  .navbar {
+    display: none;
+  }
+
 /* ---- Layout Containers ---- */
 
 .main-header {
@@ -87,19 +95,40 @@ img {
 	padding-bottom: .5em;
 }
 
+/* .navbar {
+  display: none;
+} */
+
+.container {
+  width: 95%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headshot {
+  display: block;
+  width: 275px;
+  height: 275px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: 0;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: -1px;
+  border: darkgrey solid 5px;
+}
+
 .main-footer {
 	text-align: center;
-}
-
-.col {
-	padding-right: 1em;
-	padding-left: 1em;
-}
-
-.main-footer {
-	background: #fff;
-	padding: 2em 0;
-	margin-top: 30px;
+  background: #fff;
+  padding: 2em 0;
+  margin-top: 130px;
+  position: absolute;
+  bottom: 0;
+  z-index: auto;
+  width: 100%;
 }
 
 /* =================================
@@ -137,34 +166,33 @@ img {
   font-family: 'Montserrat' sans-serif;
   font-weight: lighter;
   font-stretch: expanded;
-  font-size: 5em;
-  margin-top: 0;
-  margin-bottom: 0;
+  font-size: 3em;
+  margin-top: -35px;
+  margin-bottom: 25px;
 }
 
 .hero h2 {
   font-family: 'Montserrat';
-  font-size: 1.5em;
+  font-size: 1.25em;
   margin-top: .1em;
   margin-bottom: .5em;
   color: white;
-  font-weight: ;
 }
 
 .hero .btn {
   display: block;
-  width: 200px;
-  margin-top: 50px;
+  width: 150px;
+  margin-top: 65px;
   margin-left: auto;
   margin-right: auto;
-  padding: 15px 20px;
-  color: white;
-  font-size: auto;
+  text: 1em;
   font-family: 'Montserrat';
-  border: 1px solid white;
-  border-radius: 20px;
-  font-weight: lighter;
-  background-color: #a31874;
+  color: #1874a3 !important;
+  text-transform: uppercase;
+  background: #ffffff;
+  padding: 10px 15px;
+  border: 3px solid #1874a3 !important;
+  border-radius: 6px;
 }
 
 /* =================================
@@ -172,6 +200,32 @@ img {
 ==================================== */
 
 @media (min-width: 769px) {
+
+  .navbar {
+      overflow: hidden;
+      background-color: clear;
+      position: absolute; /* Set the navbar to fixed position */
+      top: 10px;; /* Position the navbar at the top of the page */
+      right: 15px;
+      width: 100%; /* Full width */
+  }
+
+  /* Links inside the navbar */
+  .navbar a {
+      float: right;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+  /* Change background on mouse-over */
+  .navbar a:hover {
+      background: darkgrey;
+      color: black;
+      border-radius: 15px;
+  }
 
   .main-header {
     position: fixed;
@@ -186,20 +240,75 @@ img {
     padding-top: 0;
 }
 
-	.container {
-		width: 90%;
-		margin: 0 auto;
-	}
+  .hero {
+    position: relative;
+  }
+
+  .hero h1 {
+    color: white;
+    font-family: 'Montserrat' sans-serif;
+    font-weight: lighter;
+    font-stretch: expanded;
+    font-size: 5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 200px;
+    right: 15px;
+  }
+
+  .hero h2 {
+    font-family: 'Montserrat';
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: .5em;
+    color: white;
+    position: absolute;
+    bottom: 165px;
+    right: 63px;
+  }
+
+  .hero .btn {
+    display: block;
+    width: 200px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 20px;
+    font-size: auto;
+    font-family: 'Montserrat';
+    font-weight: lighter;
+    position: absolute;
+    bottom: 75px;
+    right: 75px;
+    color: #1874a3 !important;
+    text-transform: uppercase;
+    background: #ffffff;
+    padding: 15px;
+    border: 3px solid #1874a3 !important;
+    border-radius: 6px;
+  }
+
+.btn:hover {
+    color: #ffffff !important;
+    background: #1874a3;
+    text: white;
+    border-top-color: 0 !important;
+    border-right-color: 0 !important;
+    border-left-color: darkgrey !important;
+    border-bottom-color: darkgrey !important;
+    transition: all 0.4s ease 0s;
+}
 
 	.name,
 	.col {
 		float: left;
 	}
 
-	.primary,
+	/* .primary,
 	.secondary {
 		width: 50%;
-	}
+	} */
 
 	.main-nav {
 		float: right;
@@ -213,6 +322,28 @@ img {
 	.tagline {
 		font-size: 1.4em;
 	}
+
+.container {
+  max-width: 1050;
+}
+  .primary {
+    width: 50%;
+    display: block;
+    float: right;
+    margin-left: -12px;
+  }
+
+  .headshot {
+    display: block;
+    float: left;
+    width: 275px;
+    height: 275px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-left: 75px;
+  }
 
 	/* ---- Float clearfix ---- */
 
