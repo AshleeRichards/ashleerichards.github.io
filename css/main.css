@@ -14,7 +14,7 @@ body {
 
 h1 {
   text-align: center;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-family: 'Montserrat', sans-serif;
   font-size: 2em;
 }
@@ -100,15 +100,20 @@ img {
 } */
 
 .container {
-  width: 95%;
+  width: 100%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
 }
 
+.primary {
+    display: block;
+    margin-bottom: 10px;
+  }
+
 .headshot {
-  display: block;
-  width: 275px;
+  display: none;
+  /* width: 275px;
   height: 275px;
   overflow: hidden;
   border-radius: 50%;
@@ -117,19 +122,66 @@ img {
   margin-left: auto;
   margin-right: auto;
   padding: -1px;
-  border: darkgrey solid 5px;
+  border: darkgrey solid 5px; */
 }
 
 .main-footer {
-	text-align: center;
-  background: #fff;
-  padding: 2em 0;
-  margin-top: 130px;
   position: absolute;
-  bottom: 0;
-  z-index: auto;
-  width: 100%;
+  ;
+  background: fff;
+	padding: 1em 0;
+	margin-top: 30px;
+  text-align: center;
 }
+
+.content-blocks {
+  display: block;
+  margin: auto;
+  width: 90%;
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#block1 {
+  background-color: #008088;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#block2 {
+  background-color: #a31874;
+}
+
+#block3 {
+  background-color: #6473a1;
+}
+
+#block4 {
+  background-color: #4174a7;
+}
+
+#block1,
+#block2,
+#block3,
+#block4 {
+  display: block;
+  /* background-image: url(/Users/ashleerichards/Documents/CodeLouisville/personal-site/img/475x250ph.png); */
+  background-size: contain;
+  height: 200px;
+  max-width: 475px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  font-family: "Montserrat" sans-serif;
+  font-size: 2em;
+  color: white;
+  text-transform: lowercase;
+  text-align: center;
+  padding-top: 140px;
+  border: 2px darkgrey solid;
+  opacity: .65;
+  }
 
 /* =================================
  Hero Styles
@@ -199,95 +251,96 @@ img {
   Media Queries
 ==================================== */
 
-@media (min-width: 769px) {
-
-  .navbar {
-      overflow: hidden;
-      background-color: clear;
-      position: absolute; /* Set the navbar to fixed position */
-      top: 10px;; /* Position the navbar at the top of the page */
-      right: 15px;
-      width: 100%; /* Full width */
-  }
-
-  /* Links inside the navbar */
-  .navbar a {
-      float: right;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-  }
-
-  /* Change background on mouse-over */
-  .navbar a:hover {
-      background: darkgrey;
-      color: black;
-      border-radius: 15px;
-  }
-
-  .main-header {
-    position: fixed;
-    background: #fff;
-    box-shadow: 0 1px 4px rgba(0,0,0,.4);
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
+@media (min-width: 795px) {
 
   body {
     padding-top: 0;
+  }
+
+.navbar {
+    display: inline-block;
+    overflow: hidden;
+    background-color: clear;
+    position: absolute; /* Set the navbar to fixed position */
+    top: 10px;; /* Position the navbar at the top of the page */
+    right: 15px;
+    width: 100%; /* Full width */
 }
 
-  .hero {
-    position: relative;
-  }
-
-  .hero h1 {
-    color: white;
-    font-family: 'Montserrat' sans-serif;
-    font-weight: lighter;
-    font-stretch: expanded;
-    font-size: 5em;
-    margin-top: 0;
-    margin-bottom: 0;
-    position: absolute;
-    bottom: 200px;
-    right: 15px;
-  }
-
-  .hero h2 {
-    font-family: 'Montserrat';
-    font-size: 1.5em;
-    margin-top: 0;
-    margin-bottom: .5em;
-    color: white;
-    position: absolute;
-    bottom: 165px;
-    right: 63px;
-  }
-
-  .hero .btn {
+/* Links inside the navbar */
+.navbar a {
+    float: right;
     display: block;
-    width: 200px;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px 20px;
-    font-size: auto;
-    font-family: 'Montserrat';
-    font-weight: lighter;
-    position: absolute;
-    bottom: 75px;
-    right: 75px;
-    color: #1874a3 !important;
-    text-transform: uppercase;
-    background: #ffffff;
-    padding: 15px;
-    border: 3px solid #1874a3 !important;
-    border-radius: 6px;
-  }
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: darkgrey;
+    color: black;
+    border-radius: 15px;
+}
+
+.main-header {
+  position: fixed;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.4);
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero h1 {
+  color: white;
+  font-family: 'Montserrat' sans-serif;
+  font-weight: lighter;
+  font-stretch: expanded;
+  font-size: 5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 200px;
+  right: 63px;
+}
+
+.hero h2 {
+  font-family: 'Montserrat';
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: .5em;
+  color: white;
+  position: absolute;
+  bottom: 165px;
+  right: 63px;
+}
+
+.hero .btn {
+  display: block;
+  width: 200px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 20px;
+  font-size: auto;
+  font-family: 'Montserrat';
+  font-weight: lighter;
+  position: absolute;
+  bottom: 75px;
+  right: 75px;
+  color: #1874a3 !important;
+  text-transform: uppercase;
+  background: #ffffff;
+  padding: 15px;
+  border: 3px solid #1874a3 !important;
+  border-radius: 6px;
+}
 
 .btn:hover {
     color: #ffffff !important;
@@ -300,49 +353,83 @@ img {
     transition: all 0.4s ease 0s;
 }
 
-	.name,
-	.col {
-		float: left;
-	}
+.name {
+	float: left;
+}
 
-	/* .primary,
-	.secondary {
-		width: 50%;
-	} */
+.main-nav {
+	float: right;
+}
 
-	.main-nav {
-		float: right;
-	}
+.main-nav li {
+	display: inline-block;
+	margin-left: 15px;
+}
 
-	.main-nav li {
-		display: inline-block;
-		margin-left: 15px;
-	}
-
-	.tagline {
-		font-size: 1.4em;
+.tagline {
+	font-size: 1.4em;
 	}
 
 .container {
-  max-width: 1050;
+  max-width: 1050px;
 }
-  .primary {
-    width: 50%;
+
+.primary {
     display: block;
+    width: 50%;
     float: right;
-    margin-left: -12px;
+    margin-left: -15px;
+    margin-right: 50px;
+    margin-bottom: 20px;
   }
 
-  .headshot {
+.headshot {
+  display: block;
+  float: left;
+  width: 275px;
+  height: 275px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 75px;
+  border: darkgrey solid 5px;
+  }
+
+  .top-content-wrapper {
     display: block;
+    margin-bottom: 20px;
+  }
+
+  .content-blocks {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1050px;
+  }
+
+  #block1,
+  #block2,
+  #block3,
+  #block4 {
+    display: inline-block;
+    width: 48%;
+      }
+
+  #block1 {
     float: left;
-    width: 275px;
-    height: 275px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-top: 10px;
-    margin-bottom: 100px;
-    margin-left: 75px;
+  }
+
+  #block2 {
+    float: right;
+    padding-left: 15px;
+  }
+
+  #block3 {
+    float: left;
+  }
+
+  #block4 {
+    float: right;
   }
 
 	/* ---- Float clearfix ---- */
