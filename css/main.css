@@ -377,7 +377,6 @@ img {
     width: 50%;
     float: right;
     margin-left: -15px;
-    margin-right: 50px;
     margin-bottom: 20px;
   }
 
@@ -399,7 +398,7 @@ img {
   }
 
   .content-blocks {
-    display: inline-block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 1050px;
