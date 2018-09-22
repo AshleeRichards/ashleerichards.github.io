@@ -203,7 +203,7 @@ img {
     /* Background styles */
     background: linear-gradient(#1874a3, transparent 98%),
     linear-gradient(0deg, #fff, transparent),
-    #ffa949 url('/Users/ashleerichards/Documents/CodeLouisville/personal-site/img/Koru.jpg');
+    #ffa949 url('https://github.com/AshleeRichards/ashleerichards.github.io/blob/master/img/Koru.jpg');
     background-size: cover;
     background-position: center left;
     background-repeat: no-repeat;
