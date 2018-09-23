@@ -126,12 +126,33 @@ img {
 }
 
 .main-footer {
-  position: absolute;
-  ;
-  background: fff;
-	padding: 1em 0;
-	margin-top: 30px;
+  display: block;
+  height: 100px;
+  width: 100vw;
+  background: #fff;
+	padding-top: 25px;
+	margin-top: 75px;
+  color: darkgrey;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  /* border-top: 1px darkgrey solid; */
+}
+
+.footer a {
+  color: darkgrey;
+  text-decoration: underline;
+}
+
+#email {
+  display: block;
+}
+
+#copyright {
+  display: block;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .content-blocks {
@@ -201,7 +222,7 @@ img {
     text-align: center;
 
     /* Background styles */
-    background: linear-gradient(#1874a3, transparent 98%), linear-gradient(0deg, #fff, transparent), #ffa949 url('../img/Koru.jpg');
+    background: linear-gradient(#1874a3, transparent 98%), linear-gradient(0deg, #fff, transparent), url('../img/Koru.jpg');
     background-size: cover;
     background-position: center left;
     background-repeat: no-repeat;
