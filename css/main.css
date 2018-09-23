@@ -109,6 +109,9 @@ img {
 .primary {
     display: block;
     margin-bottom: 10px;
+    text-align: justify;
+    margin-left: 1em;
+    margin-right: 1em;
   }
 
 .headshot {
@@ -397,7 +400,8 @@ img {
     display: block;
     width: 50%;
     float: right;
-    margin-left: -15px;
+    margin-left: -10px;
+    margin-right: 3em;
     margin-bottom: 20px;
   }
 
