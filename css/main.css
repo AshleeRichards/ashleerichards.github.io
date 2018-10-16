@@ -48,6 +48,10 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	opacity: .75;
+}
+
 img {
 	max-width: 100%;
 }
@@ -63,29 +67,31 @@ img {
 	margin: 0;
 }
 
-.main-nav {
-	margin-top: 5px;
+.navbar {
+	position: absolute; /* Set the navbar to fixed position */
+	top: 10px; /* Position the navbar at the top of the page */
+	background-color: none;
 }
 
-	.name a,
-	.main-nav a {
-		display: block;
+	.navbar a {
 		text-align: center;
-		padding: 10px 15px;
-	}
-
-	.main-nav a {
+		margin-left: 5px;
 		font-size: .95em;
-		color: #3acec2;
+		color: white;
 		text-transform: uppercase;
+		}
+
+	.navbar a {
+
 	}
 
-	.main-nav a:hover {
+	.navbar a:hover {
 		color: #093a58;
 	}
 
   .navbar {
-    display: none;
+    display: flex;
+		flex-direction: column;
   }
 
 /* ---- Layout Containers ---- */
@@ -116,17 +122,7 @@ img {
 
 .headshot {
   display: none;
-  /* width: 275px;
-  height: 275px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-top: 0;
-  margin-bottom: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: -1px;
-  border: darkgrey solid 5px; */
-}
+  }
 
 .main-footer {
   display: block;
@@ -159,12 +155,11 @@ img {
 }
 
 .content-blocks {
-  display: block;
+  display: flex;
+	flex-direction: column;
+	width: 90%
   margin: auto;
-  width: 90%;
-  padding-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 30px;
 }
 
 #block1 {
@@ -189,8 +184,8 @@ img {
 #block2,
 #block3,
 #block4 {
-  display: block;
   /* background-image: url(/Users/ashleerichards/Documents/CodeLouisville/personal-site/img/475x250ph.png); */
+	width: 100%;
   background-size: contain;
   height: 200px;
   max-width: 475px;
@@ -205,7 +200,10 @@ img {
   padding-top: 140px;
   border: 2px darkgrey solid;
   opacity: .65;
+	border-radius: 5px;
   }
+
+
 
 /* =================================
  Hero Styles
@@ -230,7 +228,6 @@ img {
     background-position: center left;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
     margin-bottom: 2em;
 
 }
@@ -241,7 +238,7 @@ img {
   font-weight: lighter;
   font-stretch: expanded;
   font-size: 3em;
-  margin-top: -35px;
+  margin-top: 50%;
   margin-bottom: 25px;
 }
 
@@ -256,15 +253,15 @@ img {
 .hero .btn {
   display: block;
   width: 150px;
-  margin-top: 65px;
+  margin-top: 35px;
   margin-left: auto;
   margin-right: auto;
   text: 1em;
   font-family: 'Montserrat';
   color: #1874a3 !important;
-  text-transform: uppercase;
+  text-transform: none;
   background: #ffffff;
-  padding: 10px 15px;
+  padding: 10px;
   border: 3px solid #1874a3 !important;
   border-radius: 6px;
 }
@@ -280,13 +277,10 @@ img {
   }
 
 .navbar {
-    display: inline-block;
-    overflow: hidden;
-    background-color: clear;
-    position: absolute; /* Set the navbar to fixed position */
-    top: 10px;; /* Position the navbar at the top of the page */
-    right: 15px;
-    width: 100%; /* Full width */
+    display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+    width: 90%; /* Full width */
 }
 
 /* Links inside the navbar */
@@ -351,17 +345,9 @@ img {
   margin-right: auto;
   padding: 15px 20px;
   font-size: auto;
-  font-family: 'Montserrat';
-  font-weight: lighter;
   position: absolute;
   bottom: 75px;
   right: 75px;
-  color: #1874a3 !important;
-  text-transform: uppercase;
-  background: #ffffff;
-  padding: 15px;
-  border: 3px solid #1874a3 !important;
-  border-radius: 6px;
 }
 
 .btn:hover {
@@ -379,12 +365,14 @@ img {
 	float: left;
 }
 
-.main-nav {
+.navbar {
+	display: flex;
+	flex-direction: row;
 	float: right;
 }
 
-.main-nav li {
-	display: inline-block;
+.navbar li {
+	display: flex;
 	margin-left: 15px;
 }
 
@@ -423,7 +411,9 @@ img {
   }
 
   .content-blocks {
-    display: block;
+    display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     max-width: 1050px;
