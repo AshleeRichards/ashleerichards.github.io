@@ -348,13 +348,13 @@ img {
 
 .btn:hover {
     color: #ffffff !important;
-    background: #1874a3;
+    background: #051b26;
     text: white;
-    border-top-color: 0 !important;
-    border-right-color: 0 !important;
+    border-top-color: #051b26 !important;
+    border-right-color: #051b26 !important;
     border-left-color: darkgrey !important;
     border-bottom-color: darkgrey !important;
-    transition: all 0.4s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 
 .name {
